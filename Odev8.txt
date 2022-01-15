@@ -1,0 +1,83 @@
+
+1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+Cevaplar:
+
+1. CREATE table employee
+    (
+        id SERIAL PRIMARY KEY,
+	    first_name VARCHAR(50),
+	    last_name VARCHAR(50),
+        birthday DATE,
+	    email VARCHAR(100)	    
+    )
+
+
+2.  insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (1, 'Ariel', 'Eefting', '2016-01-05', 'aeefting0@vistaprint.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (2, 'Freddie', 'Caulket', '1983-03-09', 'fcaulket1@upenn.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (3, 'Pattin', 'Ezzell', '2007-04-30', 'pezzell2@mysql.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (4, 'Jerry', 'Bing', '1983-10-30', 'jbing3@samsung.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (5, 'Tiphani', 'Opy', '1982-05-27', 'topy4@51.la');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (6, 'Kari', 'Letts', '2007-06-24', 'kletts5@ycombinator.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (7, 'Winona', 'Deakins', '2004-01-13', 'wdeakins6@goodreads.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (8, 'Alisander', 'McGeechan', '2013-04-22', 'amcgeechan7@studiopress.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (9, 'Dorris', 'Askin', '2002-07-20', 'daskin8@miibeian.gov.cn');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (10, 'Caldwell', 'Cornish', '1994-01-29', 'ccornish9@telegraph.co.uk');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (11, 'Oswald', 'Grouse', '2009-03-01', 'ogrousea@zimbio.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (12, 'Faythe', 'Howis', '2012-03-28', 'fhowisb@cdbaby.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (13, 'Carlina', 'Wipper', '2006-06-06', 'cwipperc@va.gov');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (14, 'Zahara', 'Trime', '2009-01-28', 'ztrimed@blogtalkradio.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (15, 'Valera', 'Gosson', '1986-03-26', 'vgossone@comcast.net');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (16, 'Timmy', 'Thonason', '1997-11-25', 'tthonasonf@yale.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (17, 'Sioux', 'Dingivan', '1980-06-19', 'sdingivang@addtoany.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (18, 'Leroi', 'Pond', '2020-02-16', 'lpondh@purevolume.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (19, 'Joann', 'Derisley', '1983-08-15', 'jderisleyi@wp.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (20, 'Celine', 'Nowill', '2009-02-28', 'cnowillj@tripadvisor.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (21, 'Helge', 'Tambling', '2015-01-23', 'htamblingk@phpbb.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (22, 'Beverley', 'Hawkeswood', '2021-12-20', 'bhawkeswoodl@scribd.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (23, 'Mozelle', 'Paradise', '1986-03-06', 'mparadisem@intel.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (24, 'Batholomew', 'Blabber', '2019-10-09', 'bblabbern@wired.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (25, 'Rob', 'McGloin', '1983-10-18', 'rmcgloino@i2i.jp');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (26, 'Hanson', 'Medler', '1982-01-06', 'hmedlerp@si.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (27, 'Morgun', 'Preon', '2013-03-07', 'mpreonq@sun.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (28, 'Parsifal', 'Bolding', '1981-10-25', 'pboldingr@bizjournals.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (29, 'Rozina', 'MacCracken', '1995-12-08', 'rmaccrackens@people.com.cn');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (30, 'Adey', 'Rosenzwig', '1991-04-03', 'arosenzwigt@unc.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (31, 'Alix', 'Karran', '1988-03-27', 'akarranu@ucoz.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (32, 'Elvyn', 'D''Oyley', '2020-01-27', 'edoyleyv@fastcompany.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (33, 'Waldon', 'O''Cullen', '2015-04-21', 'wocullenw@washington.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (34, 'Leif', 'Sapshed', '1997-02-18', 'lsapshedx@google.it');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (35, 'Thornton', 'Slocomb', '2020-05-11', 'tslocomby@yale.edu');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (36, 'Biddy', 'Lewington', '2002-09-22', 'blewingtonz@mayoclinic.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (37, 'Christabella', 'McPhate', '1984-12-14', 'cmcphate10@pen.io');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (38, 'Baillie', 'Bernasek', '2021-08-14', 'bbernasek11@amazonaws.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (39, 'Berkley', 'Dumphy', '2017-05-11', 'bdumphy12@mac.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (40, 'Cacilia', 'California', '2018-04-02', 'ccalifornia13@ebay.co.uk');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (41, 'Itch', 'Frean', '1989-03-16', 'ifrean14@geocities.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (42, 'Ashbey', 'Alfonso', '2014-07-16', 'aalfonso15@usa.gov');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (43, 'Roze', 'Stoppe', '2021-08-30', 'rstoppe16@shareasale.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (44, 'Marvin', 'Abthorpe', '2006-01-13', 'mabthorpe17@oaic.gov.au');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (45, 'Brant', 'Merrifield', '1987-07-30', 'bmerrifield18@wix.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (46, 'Clemmie', 'Alpine', '1987-04-22', 'calpine19@irs.gov');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (47, 'Phyllys', 'Rafferty', '1982-05-27', 'prafferty1a@studiopress.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (48, 'Tracie', 'Bartolomeazzi', '1999-07-07', 'tbartolomeazzi1b@odnoklassniki.ru');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (49, 'Dania', 'Santer', '2013-05-16', 'dsanter1c@prnewswire.com');
+    insert into MOCK_DATA (id, first_name, last_name, birthday, email) values (50, 'Kellie', 'Adenot', '1999-01-21', 'kadenot1d@goodreads.com');
+
+
+3.  update employee set first_name = 'Ahmet' where id = 45;
+    update employee set last_name = 'Tekin' where email = 'okkman@reddit.com';
+    update employee set birthday = '1985-08-01' where id = 24;
+    update employee set email = 'ahmet@tekin.com' where first_name = 'Fulton';
+    update employee set birthday = '1998-11-14' where last_name = 'Jobbings';
+
+4.  delete from employee where id = 10;
+    delete from employee where first_name = 'Ahmet';
+    delete from employee where last_name = 'Tekin';
+    delete from employee where birthday = '1985-08-01';
+    delete from employee where email = 'okkman@reddit.com'
+    
+    
